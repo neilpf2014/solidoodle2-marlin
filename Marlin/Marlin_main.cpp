@@ -39,6 +39,7 @@
 #include "ConfigurationStore.h"
 #include "language.h"
 #include "pins_arduino.h"
+#include "ZWobble.h"
 
 #if DIGIPOTSS_PIN > -1
 #include <SPI.h>
@@ -97,6 +98,8 @@
 //        or use S<seconds> to specify an inactivity timeout, after which the steppers will be disabled.  S0 to disable the timeout.
 // M85  - Set inactivity shutdown timer with parameter S<seconds>. To disable set zero (default)
 // M92  - Set axis_steps_per_unit - same syntax as G92
+// M96 - Report status of ZWobble addon
+// M97 - Set ZWobble parameters A<amplitude_in_mm> W<period_in_mm> P<phase_in_degrees> or Z<zRod> H<zActual>
 // M114 - Output current position to serial port 
 // M115	- Capabilities string
 // M117 - display message
@@ -840,6 +843,9 @@ void process_commands()
   {
     switch( (int)code_value() ) 
     {
+      
+      DECLARE_ZWOBBLE_MCODES(96, 97)
+      
 #ifdef ULTIPANEL
     case 0: // M0 - Unconditional stop - Wait for user button press on LCD
     case 1: // M1 - Conditional stop - Wait for user button press on LCD
