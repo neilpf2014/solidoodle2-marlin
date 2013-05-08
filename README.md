@@ -31,13 +31,10 @@ Start the Arduino IDE and you should now see 'Sanguino W/ ATmega644P' AND 'Sangu
 
 If you have a Solidoodle 2, then the firmware is already setup for you by default.
 If you have a Solidodle 3, simply change line 15 in configuration.h from:
-
 ```C
 #define SOLIDOODLE_VERSION 2
 ```
-
 to:
-
 ```C
 #define SOLIDOODLE_VERSION 3 
 ```
@@ -51,7 +48,6 @@ For the standard Solidoodle 2/3 model with the 644P microcontroller, upload the 
 If you're adding an SDSL SDCARD reader, or Panelolu LCD display and rotary encoder with SDSL, you will need to select the 'Sanguino W/ ATmega1284P' board. Please purchase a 1284P with a bootloader already in place.
 
 For a Panelolu/SD card reader combo, uncomment line 316 in configuration.h from:
-
 ```C
 //#define ULTIPANEL  //the ultipanel as on thingiverse
 ```
@@ -59,7 +55,6 @@ to:
 ```C
 #define ULTIPANEL  //the ultipanel as on thingiverse
 ```
-
 Now compile and upload.
 
 -http://www.soliforum.com/topic/127/panelolu-complete-guide/
