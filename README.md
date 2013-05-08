@@ -1,4 +1,4 @@
-#Marlin firmware for Solidoodle 2
+#Marlin firmware for Solidoodle 2/3
 
 Previous official Solidoodle firmware was based on early version of Marlin and could not be altered to accomodate a Panelolu LCD screen and encoder without many errors. This version has configuration.h and configuration_adv.h altered to reflect all changes found in official Solidoodle firmware.
 
