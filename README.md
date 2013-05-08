@@ -1,5 +1,4 @@
 #Marlin firmware for Solidoodle 2/3
-
 Previous official Solidoodle firmware was based on early version of Marlin and could not be altered to accomodate a Panelolu LCD screen and encoder without many errors. This version has configuration.h and configuration_adv.h altered to reflect all changes found in official Solidoodle firmware.
 
 ##Step 1
@@ -10,9 +9,12 @@ Download from:
 
 ###PC Users:
 
-A version of Arduino022 already setup for this firmware is now available again at: http://www.mediafire.com/?3qy0wjf86a66du8
-A version of Arduino 1.03 already setup for this firmware is now available at: 
+A version of Arduino022 already setup for this firmware is now available again at: http://www.mediafire.com/?3qy0wjf86a66du8 .
+
+A version of Arduino 1.03 already setup for this firmware is now available at: .
+
 Simply unzip into a folder of your choice.
+
 Skip to step 4.
 
 ##Step 2 (Mac only)
