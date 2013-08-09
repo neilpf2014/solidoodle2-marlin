@@ -1,35 +1,26 @@
 #Marlin firmware for Solidoodle 2/3
 Previous official Solidoodle firmware was based on early version of Marlin and could not be altered to accomodate a Panelolu LCD screen and encoder without many errors. This version has configuration.h and configuration_adv.h altered to reflect all changes found in official Solidoodle firmware.
 
-##Step 1
+##Step 1: Download Arduino
 
-You need to have the Arduino0022 IDE installed. If you have a later version, you'll need to downgrade.
-Download from:
+*Arduino0022 is no longer needed.* A preprepared version of Arduino 1.0.5 has been setup by ozadr1an. It features the required changes needed for the Sanguinololu electronics to work with versions of Arduino beyond 0022.
+Official Arduino download is available, but you will need to move the files from the Add-ons folder of this repository for the firmware to successfully compile and upload:
+
 -http://arduino.cc/hu/Main/Software
 
-###PC Users:
+###Preprepared PC version:
 
-A version of Arduino022 already setup for this firmware is now available again at: http://www.mediafire.com/?3qy0wjf86a66du8 .
-
-A version of Arduino 1.03 already setup for this firmware is now available at: .
+-http://www.mediafire.com/download/leatx20mqiicipz/Solidoodle-arduino-1.0.5-windows.zip
+-https://docs.google.com/file/d/0B7IeeziM0bp9S3FMQUM2Rk02ajQ
 
 Simply unzip into a folder of your choice.
 
-Skip to step 4.
+###Preprepared Mac version:
 
-##Step 2 (Mac only)
+-http://www.mediafire.com/download/9z357ec4rrwpfu7/Solidoodle-arduino-1.0.5-macosx.zip
+-https://docs.google.com/file/d/0B7IeeziM0bp9Yjd4SFZfb0QwZ0U
 
-Clone the repository at
--https://github.com/jmgiacalone/sanguino1284p
-and copy the included Sanguino directory to the hardware directory of your Arduino install. On Mac OS X, that would be ~/Documents/Arduino/hardware.
-
-
-##Step 3 (Mac only)
-
-Close the Arduino IDE and then copy the file avrdude.conf from the sanguino1284p clone to your ~/Documents/Arduino/hardware/tools/avr/etc.
-Start the Arduino IDE and you should now see 'Sanguino W/ ATmega644P' AND 'Sanguino W/ ATmega1284P' options in the Tools->Board menu.
-
-##Step 4
+##Step 2: Choose Solidoodle version
 
 If you have a Solidoodle 2, then the firmware is already setup for you by default.
 If you have a Solidodle 3, simply change line 15 in configuration.h from:
@@ -41,11 +32,12 @@ to:
 #define SOLIDOODLE_VERSION 3 
 ```
 
-##Step 5
+##Step 3: Select Microcontroller
 
 For the standard Solidoodle 2/3 model with the 644P microcontroller, upload the firmware as is and select the 'Sanguino W/ ATmega644P' option.
+If you have upgraded to a 1284P microcontroller, select the 'Sanguino W/ ATmega1284p 16mhz' option.
 
-##Step 6
+##Step 4: Enabling Accessories (Optional)
 
 If you're adding an SDSL SDCARD reader, or Panelolu LCD display and rotary encoder with SDSL, you will need to select the 'Sanguino W/ ATmega1284P' board. Please purchase a 1284P with a bootloader already in place.
 
