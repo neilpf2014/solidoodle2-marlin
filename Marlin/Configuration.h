@@ -9,7 +9,7 @@
 //Implementation of an idea by Prof Braino to inform user that any changes made
 //to this build by the user have been successfully uploaded into firmware.
 #define STRING_VERSION_CONFIG_H __DATE__ " " __TIME__ // build date and time
-#define STRING_CONFIG_H_AUTHOR "Lawsy/Rincewind/Tealvince/Adrian" //Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "Lawsy/Rincewind/Tealvince/Adrian/NF" //Who made the changes.
 
 // change to 3 for SD3 //{SD Patch}
 #define SOLIDOODLE_VERSION 2 //{SD Patch}
@@ -88,7 +88,7 @@
 // 55 is 100k thermistor - ATC Semitec 104GT-2 (Used in ParCan) (1k pullup)
 // 80 is QU-BD thermistor as found in QU-BD silicone bed
 
-#define TEMP_SENSOR_0 6 //{SD Patch}
+#define TEMP_SENSOR_0 11 //{SD Patch}
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_BED 6 //{SD Patch}
@@ -109,7 +109,7 @@
 // When temperature exceeds max temp, your heater will be switched off.
 // This feature exists to protect your hotend from overheating accidentally, but *NOT* from thermistor short/failure!
 // You should use MINTEMP for thermistor short/failure protection.
-#define HEATER_0_MAXTEMP 225 //{SD Patch}
+#define HEATER_0_MAXTEMP 250 //{SD Patch}
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define BED_MAXTEMP 110 //{SD Patch}
@@ -295,9 +295,9 @@ const bool Z_ENDSTOPS_INVERTING = false; //{SD Patch} // set to true to invert t
   #define MANUAL_Z_HOME_POS 0
 
 #else //assume SD2
-  #define X_MAX_POS 159
+  #define X_MAX_POS 150
   #define X_MIN_POS 0
-  #define Y_MAX_POS 150
+  #define Y_MAX_POS 145
   #define Y_MIN_POS 0
   #define Z_MAX_POS 150
   #define Z_MIN_POS 0
